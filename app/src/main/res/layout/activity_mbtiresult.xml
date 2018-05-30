@@ -153,37 +153,13 @@
             android:padding="15dp">
 
             <TextView
+                android:id="@+id/tv_MBTI_string"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="당신의 성향"
+                android:text="당신의 성향 : "
                 android:textSize="10pt" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="E : 당신은 이렇고 저렇고 그렇다."
-                android:textSize="8pt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N : 당신은 저렇고 그렇고 이렇다."
-                android:textSize="8pt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T : 당신은 그렇고 이렇고 저렇다."
-                android:textSize="8pt" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="P : 당신은 상처받기 쉬울수도 아닐수도 있으며
-이로 인해 이렇고 저렇고 그럴수도 있고 아닐수도 있고 이건 그냥
-스크롤 테스트를 위해 길게 쓴 문장이다."
-                android:textSize="8pt" />
         </LinearLayout>
     </ScrollView>
 

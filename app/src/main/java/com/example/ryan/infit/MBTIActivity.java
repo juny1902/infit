@@ -13,7 +13,6 @@ public class MBTIActivity extends AppCompatActivity {
     TabHost MBTI_Tab;
     Button finish_test;
     int[] MBTI_Counts;
-
     RadioButton[] radio_E, radio_I, radio_S, radio_N, radio_T, radio_F, radio_J, radio_P;
     int[] radio_E_id = {R.id.radio_1_A, R.id.radio_2_A, R.id.radio_3_A, R.id.radio_4_A, R.id.radio_5_A, R.id.radio_6_A, R.id.radio_7_A, R.id.radio_8_A, R.id.radio_9_A};
     int[] radio_I_id = {R.id.radio_1_B, R.id.radio_2_B, R.id.radio_3_B, R.id.radio_4_B, R.id.radio_5_B, R.id.radio_6_B, R.id.radio_7_B, R.id.radio_8_B, R.id.radio_9_B};
@@ -32,7 +31,7 @@ public class MBTIActivity extends AppCompatActivity {
         return cnt;
     }
 
-    int[] getResult() {
+    int[] getMBTIResult() {
         int cnt_E, cnt_I, cnt_S, cnt_N, cnt_T, cnt_F, cnt_J, cnt_P;
         cnt_E = countRadio(radio_E);
         cnt_I = countRadio(radio_I);
@@ -73,7 +72,7 @@ public class MBTIActivity extends AppCompatActivity {
 
     boolean isAllChecked() {
         int sum = 0;
-        int[] ret = getResult();
+        int[] ret = getMBTIResult();
         MBTI_Counts = ret;
         for (int i = 0; i < 8; i++) {
             sum += ret[i];
@@ -130,6 +129,8 @@ public class MBTIActivity extends AppCompatActivity {
                 if (isAllChecked()) {
                     Toast.makeText(getApplicationContext(), String.format("당신은 %s 입니다 !",getMBTItext()), Toast.LENGTH_SHORT).show();
                     Intent result_intent = new Intent(getApplicationContext(), MBTIResultActivity.class);
+                    result_intent.putExtra("CountMBTI",getMBTIResult());
+                    result_intent.putExtra("StringMBTI",getMBTItext());
                     startActivity(result_intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "모든 문항에 응답해주세요", Toast.LENGTH_SHORT).show();
