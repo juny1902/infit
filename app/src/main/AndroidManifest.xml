@@ -19,7 +19,10 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".IntroMBTIActivity" />
         <activity android:name=".MBTIActivity" />
-        <activity android:name=".MBTIResultActivity"></activity>
+        <activity android:name=".MBTIResultActivity" />
+        <activity android:name=".TypeActivity" />
+        <activity android:name=".ConceptActivity" />
+        <activity android:name=".InfoActivity"></activity>
     </application>
 
 </manifest>

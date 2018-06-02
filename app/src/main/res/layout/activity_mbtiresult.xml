@@ -235,10 +235,11 @@
     </ScrollView>
 
     <Button
+        android:id="@+id/btn_go_concept"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="결과 보러가기"
+        android:text="나에게 맞는 인테리어는 ?"
         android:textAlignment="center"
         android:textSize="10pt" />
 

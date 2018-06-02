@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConceptActivity">
+
+    <TextView
+        android:id="@+id/text_concept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="당신에게 추천하는 컨셉"
+        android:textAlignment="center"
+        android:textSize="10pt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame_1st"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_1st"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="1등 트로피"
+                android:cropToPadding="false"
+                android:src="@mipmap/trophy_1st" />
+
+            <ImageView
+                android:id="@+id/img_1st_trophy"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="1등 스타일"
+                android:src="@mipmap/ic_launcher"/>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_1st"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1st. ㅇㅇㅇ스타일"
+            android:textSize="8pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame_2nd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/img_2nd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="2등 이미지"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/img_2nd_trophy"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:contentDescription="2등 트로피"
+                        android:src="@mipmap/trophy_2nd" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btn_2nd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2nd. ㅇㅇㅇ스타일"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame_3rd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/img_3rd"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="3등 스타일"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/img_3rd_trophy"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:contentDescription="3등 트로피"
+                        android:src="@mipmap/trophy_3rd" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btn_3rd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3rd. ㅇㅇㅇ스타일"
+                    android:textSize="8pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

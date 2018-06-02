@@ -9,6 +9,8 @@ import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import java.lang.reflect.Type;
+
 public class MBTIActivity extends AppCompatActivity {
     TabHost MBTI_Tab;
     Button finish_test;
@@ -22,6 +24,7 @@ public class MBTIActivity extends AppCompatActivity {
     int[] radio_F_id = {R.id.radio_19_B, R.id.radio_20_B, R.id.radio_21_B, R.id.radio_22_B, R.id.radio_23_B, R.id.radio_24_B, R.id.radio_25_B, R.id.radio_26_B, R.id.radio_27_B};
     int[] radio_J_id = {R.id.radio_28_A, R.id.radio_29_A, R.id.radio_30_A, R.id.radio_31_A, R.id.radio_32_A, R.id.radio_33_A, R.id.radio_34_A, R.id.radio_35_A, R.id.radio_36_A};
     int[] radio_P_id = {R.id.radio_28_B, R.id.radio_29_B, R.id.radio_30_B, R.id.radio_31_B, R.id.radio_32_B, R.id.radio_33_B, R.id.radio_34_B, R.id.radio_35_B, R.id.radio_36_B};
+    MBTI person;
 
     int countRadio(RadioButton[] r) {
         int cnt = 0;
@@ -42,31 +45,6 @@ public class MBTIActivity extends AppCompatActivity {
         cnt_J = countRadio(radio_J);
         cnt_P = countRadio(radio_P);
         int ret[] = {cnt_E, cnt_I, cnt_S, cnt_N, cnt_T, cnt_F, cnt_J, cnt_P};
-        return ret;
-    }
-
-    String getMBTItext(){
-        String ret="";
-        if(MBTI_Counts[0] > MBTI_Counts[1]){
-            ret = ret + "E";
-        }else{
-            ret = ret + "I";
-        }
-        if(MBTI_Counts[2] > MBTI_Counts[3]){
-            ret = ret + "S";
-        }else{
-            ret = ret + "N";
-        }
-        if(MBTI_Counts[4] > MBTI_Counts[5]){
-            ret = ret + "T";
-        }else{
-            ret = ret + "F";
-        }
-        if(MBTI_Counts[6] > MBTI_Counts[7]){
-            ret = ret + "J";
-        }else{
-            ret = ret + "P";
-        }
         return ret;
     }
 
@@ -123,14 +101,18 @@ public class MBTIActivity extends AppCompatActivity {
         MBTI_Tab.addTab(tab2);
         MBTI_Tab.addTab(tab3);
         MBTI_Tab.addTab(tab4);
+
+        Intent MBTI_intent = getIntent();
+
+        person = (MBTI) MBTI_intent.getSerializableExtra("person");
+
         finish_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isAllChecked()) {
-                    Toast.makeText(getApplicationContext(), String.format("당신은 %s 입니다 !",getMBTItext()), Toast.LENGTH_SHORT).show();
-                    Intent result_intent = new Intent(getApplicationContext(), MBTIResultActivity.class);
-                    result_intent.putExtra("CountMBTI",getMBTIResult());
-                    result_intent.putExtra("StringMBTI",getMBTItext());
+                    person.setMBTI_Counts(getMBTIResult());
+                    Intent result_intent = new Intent(getApplicationContext(), TypeActivity.class);
+                    result_intent.putExtra("person",person);
                     startActivity(result_intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "모든 문항에 응답해주세요", Toast.LENGTH_SHORT).show();

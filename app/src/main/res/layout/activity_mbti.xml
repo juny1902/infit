@@ -10,9 +10,9 @@
 
     <TabHost
         android:id="@+id/MBTI_TAB"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,14 +70,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="당신은 이렇고 저렇다" />
+                                    android:text="당신은 A항목을 좋아한다." />
 
                                 <RadioButton
                                     android:id="@+id/radio_1_B"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Answer B" />
+                                    android:text="당신은 B항목을 좋아한다." />
 
                             </RadioGroup>
 
@@ -99,14 +99,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Answer A" />
+                                    android:text="  당신은 A 항목을 좋아하고 긴 문장이 나오면 줄 바꿈이 어떻게 되는지 확인하고 싶다. 세줄 이상의 긴 문장도 무리없이 띄울 수 있게 화면을 구성하였다." />
 
                                 <RadioButton
                                     android:id="@+id/radio_2_B"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Answer B" />
+                                    android:text="  당신은 B 항목을 좋아하고 긴 문장이 나오면 줄 바꿈이 어떻게 되는지 확인하고 싶다." />
 
                             </RadioGroup>
 
