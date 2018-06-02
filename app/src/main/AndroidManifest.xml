@@ -22,7 +22,8 @@
         <activity android:name=".MBTIResultActivity" />
         <activity android:name=".TypeActivity" />
         <activity android:name=".ConceptActivity" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".ConceptRoomActivity"></activity>
     </application>
 
 </manifest>

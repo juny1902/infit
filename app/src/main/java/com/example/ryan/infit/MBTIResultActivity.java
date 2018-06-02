@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MBTIResultActivity extends AppCompatActivity {
 
     int[] int_MBTI_Result;
+    TextView tv_title_result;
     TextView tv_MBTI_string;
     TextView tv_MBTI_Result;
     Button btn_go_concept;
@@ -26,6 +27,7 @@ public class MBTIResultActivity extends AppCompatActivity {
         prog_array = new ProgressBar[8];
         tv_MBTI_string = findViewById(R.id.tv_MBTI_string);
         tv_MBTI_Result = findViewById(R.id.tv_MBTI_result);
+        tv_title_result = findViewById(R.id.tv_title_result);
         btn_go_concept = findViewById(R.id.btn_go_concept);
         Intent mbti_intent = getIntent();
         person = (MBTI) mbti_intent.getSerializableExtra("person");
@@ -67,6 +69,7 @@ public class MBTIResultActivity extends AppCompatActivity {
 
         }
         tv_MBTI_string.setText(tv_MBTI_string.getText() + mbti_result_string);
+        tv_title_result.setText(person.getMBTI_character_text());
 
         btn_go_concept.setOnClickListener(new View.OnClickListener() {
             @Override

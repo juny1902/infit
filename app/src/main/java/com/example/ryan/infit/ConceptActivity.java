@@ -24,38 +24,6 @@ public class ConceptActivity extends AppCompatActivity {
         im_3rd = findViewById(R.id.img_3rd);
         person = (MBTI) prev_intent.getSerializableExtra("person");
 
-        switch (person.getMBTI_Result_4words().substring(0, 3)) {
-            case "EST":
-                btn_1st.setText("1st. 클래식");
-                btn_2nd.setText("2nd. 모던");
-                btn_3rd.setText("3rd. 앤티크");
-                im_1st.setImageDrawable(getDrawable(R.mipmap.trophy_1st));
-                im_2nd.setImageDrawable(getDrawable(R.mipmap.trophy_2nd));
-                im_3rd.setImageDrawable(getDrawable(R.mipmap.trophy_3rd));
-                break;
-            case "ESF":
-                btn_1st.setText("1st. 클래식");
-                btn_2nd.setText("2nd. 모던");
-                btn_3rd.setText("3rd. 앤티크");
-                im_1st.setImageDrawable(getDrawable(R.mipmap.trophy_1st));
-                im_2nd.setImageDrawable(getDrawable(R.mipmap.trophy_2nd));
-                im_3rd.setImageDrawable(getDrawable(R.mipmap.trophy_3rd));
-                break;
-            case "ENT":
-                break;
-            case "ENF":
-                break;
-            case "IST":
-                break;
-            case "ISF":
-                break;
-            case "INT":
-                break;
-            case "INF":
-                break;
-            default:
-
-        }
     }
 }
-}
+

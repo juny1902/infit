@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#33000000"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context=".TypeActivity">
     <TextView
@@ -12,6 +12,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="당신은..."
+        android:textColor="@color/white"
         android:textSize="13pt" />
     <TextView
         android:id="@+id/tv_type_title"
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="용의주도한 사업가 !"
         android:textSize="13pt" />
 
@@ -36,6 +38,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/im_type_character"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="30dp"
@@ -56,6 +59,8 @@
 
     <Button
         android:id="@+id/btn_go_mbti_detailed"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
