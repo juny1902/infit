@@ -13,6 +13,18 @@ public class Style_Info {
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
+    static String[] Styles_description = {
+            "사랑스러운 ...",
+            "전통적인 ...",
+            "고전파 ...",
+            "스마트한 ...",
+            "우아한 ...",
+            "고향의 ...",
+            "세련된 ...",
+            "심플한 ...",
+            "자연과 함께...",
+            "간편한 ..."
+    };
     static String[] Styles = {
             "로맨틱",
             "에스닉",
