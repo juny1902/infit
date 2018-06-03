@@ -30,52 +30,52 @@ public class TypeActivity extends AppCompatActivity {
 
         switch (person.getMBTI_Result_4words()) {
             case "INTJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_intj));
                 break;
             case "INTP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_intp));
                 break;
             case "ENTJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_entj));
                 break;
             case "ENTP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_entp));
                 break;
             case "INFJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_infj));
                 break;
             case "INFP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_infp));
                 break;
             case "ENFJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_enfj));
                 break;
             case "ENFP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_enfp));
                 break;
             case "ISTJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_istj));
                 break;
             case "ISFJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_isfj));
                 break;
             case "ESTJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_estj));
                 break;
             case "ESFJ":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_esfj));
                 break;
             case "ISTP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_istp));
                 break;
             case "ISFP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_isfp));
                 break;
             case "ESTP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_estp));
                 break;
             case "ESFP":
-                im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+                im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_esfp));
                 break;
             default:
                 im_mbti_character.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));

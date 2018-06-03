@@ -23,7 +23,8 @@
         <activity android:name=".TypeActivity" />
         <activity android:name=".ConceptActivity" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".ConceptRoomActivity"></activity>
+        <activity android:name=".ConceptRoomActivity" />
+        <activity android:name=".MyInfoActivity"></activity>
     </application>
 
 </manifest>
