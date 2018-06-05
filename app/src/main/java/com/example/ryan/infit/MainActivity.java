@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent loading = new Intent(getApplicationContext(), StartUpActivity.class);
-        startActivity(loading);
+        Intent help = new Intent(getApplicationContext(), First_Help_Activity.class);
+        startActivity(help);
         btn_go_about = findViewById(R.id.btn_about_us);
         btn_go_test = findViewById(R.id.btn_start_test);
         btn_go_myInfo = findViewById(R.id.btn_my_info);

@@ -18,6 +18,8 @@ public class StartUpActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Intent main_activity = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(main_activity);
                 finish();
             }
         }, 3000);

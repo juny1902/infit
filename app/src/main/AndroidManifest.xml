@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".StartUpActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StartUpActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".AboutActivity"
@@ -49,6 +49,9 @@
         <activity
             android:name=".MyInfoActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".First_Help_Activity"
+            android:theme="@style/Transparent"></activity>
     </application>
 
 </manifest>
