@@ -36,6 +36,7 @@
                 android:id="@+id/img_1st"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:contentDescription="1등 스타일"
                 android:cropToPadding="false"
                 android:scaleType="fitCenter"
@@ -75,6 +76,7 @@
                         android:id="@+id/img_2nd"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="5dp"
                         android:contentDescription="2등 이미지"
                         android:src="@mipmap/ic_launcher" />
 
@@ -107,9 +109,9 @@
 
                     <ImageView
                         android:id="@+id/img_3rd"
-
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="5dp"
                         android:contentDescription="3등 스타일"
                         android:src="@mipmap/ic_launcher" />
 

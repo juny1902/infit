@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp">
+
     <TextView
         android:id="@+id/tv_title_result"
-        android:textAlignment="center"
-        android:text="열정적인 활동가"
-        android:layout_marginBottom="20dp"
-        android:textSize="12pt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="열정적인 활동가"
+        android:textAlignment="center"
+        android:textSize="12pt" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -236,6 +238,7 @@
                 android:id="@+id/tv_MBTI_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
                 android:textSize="8pt" />
 
         </LinearLayout>

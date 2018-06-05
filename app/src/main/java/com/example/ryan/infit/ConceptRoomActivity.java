@@ -23,10 +23,16 @@ public class ConceptRoomActivity extends AppCompatActivity {
         img_concept_room = findViewById(R.id.img_concept_room);
         img_saying_character = findViewById(R.id.im_saying_character);
 
-        tv_style.setText(Style_Info.Styles[style_index] + " 란?");
+        if(style_index == 0 || style_index == 1 || style_index == 2 ||
+                style_index == 6 || style_index == 7 || style_index == 9)
+            tv_style.setText(Style_Info.Styles[style_index] + " 이란?");
+        else
+            tv_style.setText(Style_Info.Styles[style_index] + " 란?");
+
         tv_style_description.setText("  " + Style_Info.Styles_description[style_index]);
 
-        img_concept_room.setImageDrawable(getDrawable(Style_Info.index_to_id[style_index]));
+        img_concept_room.setImageDrawable(getDrawable(Style_Info.index_to_cloud[style_index]));
+
         switch (person.getMBTI_Result_4words()) {
             case "INTJ":
                 img_saying_character.setImageDrawable(getDrawable(R.mipmap.chara_intj));

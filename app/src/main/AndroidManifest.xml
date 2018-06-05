@@ -4,27 +4,51 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/arabang_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/arabang_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".IntroMBTIActivity" />
-        <activity android:name=".MBTIActivity" />
-        <activity android:name=".MBTIResultActivity" />
-        <activity android:name=".TypeActivity" />
-        <activity android:name=".ConceptActivity" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".ConceptRoomActivity" />
-        <activity android:name=".MyInfoActivity"></activity>
+        <activity
+            android:name=".StartUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntroMBTIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MBTIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MBTIResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConceptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConceptRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyInfoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

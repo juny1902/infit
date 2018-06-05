@@ -5,23 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:padding="20dp"
+    android:background="@color/colorPrimary"
     tools:context=".ConceptRoomActivity">
 
     <ImageView
+        android:padding="10dp"
+        android:background="@color/white"
         android:id="@+id/img_concept_room"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.5"
+        android:layout_height="match_parent"
+        android:layout_weight="1.7"
         android:contentDescription="Word Cloud"
         android:src="@mipmap/ic_launcher_round" />
 
     <ScrollView
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="2"
         android:background="@color/white"
-        android:padding="20dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +44,9 @@
                 android:id="@+id/tv_style_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
                 android:text="  고풍적인 디자인과 이쁘고 이쁜 디자인이다."
+                android:textAlignment="textStart"
                 android:textSize="7pt" />
 
         </LinearLayout>
@@ -49,29 +55,31 @@
     </ScrollView>
 
     <LinearLayout
-        android:gravity="center"
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_weight="2.5"
+        android:gravity="center">
 
         <ImageView
-            android:paddingRight="30dp"
             android:id="@+id/im_saying_character"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_round"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/ic_launcher_round" />
 
         <Button
             android:id="@+id/btn_go_shopping"
-            android:layout_marginLeft="20dp"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:background="@color/colorPrimary"
+            android:layout_marginRight="30dp"
+            android:background="@color/colorAccent"
+            android:textSize="10pt"
             android:text="어떻게 꾸밀까?"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </LinearLayout>
 

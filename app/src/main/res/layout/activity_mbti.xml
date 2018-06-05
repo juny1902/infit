@@ -5,11 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:background="@color/colorPrimary"
     tools:context=".MBTIActivity">
 
 
     <TabHost
         android:id="@+id/MBTI_TAB"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -53,6 +55,7 @@
 
                             <TextView
                                 android:id="@+id/text_1"
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -70,6 +73,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:lineSpacingExtra="8sp"
                                     android:text="나는 여러 친구들과 많이 사귀는 편이다." />
 
                                 <RadioButton
@@ -77,6 +81,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:lineSpacingExtra="8sp"
                                     android:text="나는 몇 명의 친구들과 깊이 사귀는 편이다." />
 
                             </RadioGroup>
@@ -89,6 +94,7 @@
                                 android:text="Question 2." />
 
                             <RadioGroup
+
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layoutDirection="rtl">
@@ -125,7 +131,7 @@
 
                                 <RadioButton
                                     android:id="@+id/radio_3_A"
-                                    android:layout_width="309dp"
+                                    android:layout_width="260dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="처음 보는 친구들을 만나면 먼저 말한다." />
@@ -1171,11 +1177,13 @@
     </TabHost>
 
     <Button
+        android:layout_margin="15dp"
+        android:layout_weight="5"
         android:id="@+id/btn_finish"
         android:layout_width="280dp"
         android:background="@color/colorAccent"
         android:textColor="@color/white"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:text="테스트 완료"
         android:textSize="12pt" />
