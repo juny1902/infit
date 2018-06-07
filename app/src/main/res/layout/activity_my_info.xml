@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -17,7 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="2.1"
                 android:background="@color/colorPrimary"
                 android:orientation="vertical">
 
@@ -41,10 +43,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_myroom_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:lines="2"
                     android:paddingBottom="20dp"
-                    android:text="나는 ENTJ 대담한 통솔자형 !"
+                    android:text="검사를 먼저 해 주세요 !"
                     android:textAlignment="center"
                     android:textSize="9pt" />
 
@@ -67,7 +72,7 @@
                         android:textSize="8pt" />
 
                     <ProgressBar
-                        android:id="@+id/progress_E"
+                        android:id="@+id/aprogress_E"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -75,18 +80,18 @@
                         android:layout_weight="2"
                         android:layoutDirection="rtl"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#3d66ae" />
 
                     <ProgressBar
-                        android:id="@+id/progress_I"
+                        android:id="@+id/aprogress_I"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="2"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#ed6b6e" />
 
                     <TextView
@@ -117,7 +122,7 @@
                         android:textSize="8pt" />
 
                     <ProgressBar
-                        android:id="@+id/progress_S"
+                        android:id="@+id/aprogress_S"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -125,18 +130,18 @@
                         android:layout_weight="2"
                         android:layoutDirection="rtl"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#3d66ae" />
 
                     <ProgressBar
-                        android:id="@+id/progress_N"
+                        android:id="@+id/aprogress_N"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="2"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#ed6b6e" />
 
                     <TextView
@@ -167,7 +172,7 @@
                         android:textSize="8pt" />
 
                     <ProgressBar
-                        android:id="@+id/progress_T"
+                        android:id="@+id/aprogress_T"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -175,18 +180,18 @@
                         android:layout_weight="2"
                         android:layoutDirection="rtl"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#3d66ae" />
 
                     <ProgressBar
-                        android:id="@+id/progress_F"
+                        android:id="@+id/aprogress_F"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="2"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#ed6b6e" />
 
                     <TextView
@@ -218,7 +223,7 @@
                         android:textSize="8pt" />
 
                     <ProgressBar
-                        android:id="@+id/progress_J"
+                        android:id="@+id/aprogress_J"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -226,18 +231,18 @@
                         android:layout_weight="2"
                         android:layoutDirection="rtl"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#3d66ae" />
 
                     <ProgressBar
-                        android:id="@+id/progress_P"
+                        android:id="@+id/aprogress_P"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="2"
                         android:max="9"
-                        android:progress="5"
+                        android:progress="0"
                         android:progressTint="#ed6b6e" />
 
                     <TextView
@@ -267,10 +272,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:lineSpacingMultiplier="1.2"
+                    android:lines="3"
                     android:paddingLeft="20dp"
-                    android:text="추천
-인테리어
-컨셉"
+                    android:text="추천\n인테리어\n컨셉"
                     android:textSize="8pt" />
 
                 <LinearLayout
@@ -288,12 +292,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="1"
                             android:textColor="@color/colorPrimary"
@@ -302,9 +307,9 @@
                         <TextView
                             android:id="@+id/tv_myroom_1st"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="모던"
+                            android:text="-"
                             android:textAlignment="center"
                             android:textSize="9pt" />
 
@@ -319,12 +324,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="2"
                             android:textColor="@color/colorPrimary"
@@ -333,9 +339,9 @@
                         <TextView
                             android:id="@+id/tv_myroom_2nd"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="미니멀"
+                            android:text="-"
                             android:textAlignment="center"
                             android:textSize="9pt" />
 
@@ -350,12 +356,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="3"
                             android:textColor="@color/colorPrimary"
@@ -364,9 +371,9 @@
                         <TextView
                             android:id="@+id/tv_myroom_3rd"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="클래식"
+                            android:text="-"
                             android:textAlignment="center"
                             android:textSize="9pt" />
 
@@ -381,6 +388,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btn_reset"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -392,19 +400,42 @@
         </LinearLayout>
 
         <ImageView
-
+            android:id="@+id/im_myroom_chara"
             android:layout_width="134dp"
             android:layout_height="130dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:src="@mipmap/chara_enfj"
+            android:src="@mipmap/home_character_none"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.123" />
+            app:layout_constraintVertical_bias="0.161" />
+
+
+        <ImageButton
+            android:id="@+id/btn_back_from_myinfo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_share_my_info"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#00000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <TextView

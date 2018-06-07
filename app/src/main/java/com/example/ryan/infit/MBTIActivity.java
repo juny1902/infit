@@ -1,7 +1,10 @@
 package com.example.ryan.infit;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +12,7 @@ import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.Toast;
 
-import java.lang.reflect.Type;
+import com.google.gson.Gson;
 
 public class MBTIActivity extends AppCompatActivity {
     TabHost MBTI_Tab;
@@ -64,6 +67,31 @@ public class MBTIActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("검사 중단")
+                .setMessage("\n검사를 중단하시겠습니까?\n\n(진행상황은 저장되지 않습니다)\n")
+                .setCancelable(false)
+                .setPositiveButton("중단", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mbti);
@@ -112,8 +140,75 @@ public class MBTIActivity extends AppCompatActivity {
                 if (isAllChecked()) {
                     person.setMBTI_Counts(getMBTIResult());
                     Intent result_intent = new Intent(getApplicationContext(), TypeActivity.class);
-                    result_intent.putExtra("person",person);
+
+                    SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);
+
+                    SharedPreferences.Editor prefsEditor = sPrefs.edit();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(person);
+                    prefsEditor.putString("MBTIPerson",json);
+                    prefsEditor.commit();
+                    int[] places;
+
+                    switch (person.getMBTI_Result_4words()) {
+                        case "ESTJ":
+                            places = Style_Info.Style_Places[0];
+                            break;
+                        case "ESTP":
+                            places = Style_Info.Style_Places[1];
+                            break;
+                        case "ESFP":
+                            places = Style_Info.Style_Places[2];
+                            break;
+                        case "ESFJ":
+                            places = Style_Info.Style_Places[3];
+                            break;
+                        case "ENTJ":
+                            places = Style_Info.Style_Places[4];
+                            break;
+                        case "ENTP":
+                            places = Style_Info.Style_Places[5];
+                            break;
+                        case "ENFJ":
+                            places = Style_Info.Style_Places[6];
+                            break;
+                        case "ENFP":
+                            places = Style_Info.Style_Places[7];
+                            break;
+                        case "ISTJ":
+                            places = Style_Info.Style_Places[8];
+                            break;
+                        case "ISTP":
+                            places = Style_Info.Style_Places[9];
+                            break;
+                        case "ISFJ":
+                            places = Style_Info.Style_Places[10];
+                            break;
+                        case "ISFP":
+                            places = Style_Info.Style_Places[11];
+                            break;
+                        case "INTJ":
+                            places = Style_Info.Style_Places[12];
+                            break;
+                        case "INTP":
+                            places = Style_Info.Style_Places[13];
+                            break;
+                        case "INFJ":
+                            places = Style_Info.Style_Places[14];
+                            break;
+                        case "INFP":
+                            places = Style_Info.Style_Places[15];
+                            break;
+                        default:
+                            places = Style_Info.Style_Places[0];
+                    }
+
+                    sPrefs.edit().putInt("1stStyle", places[0]).commit();
+                    sPrefs.edit().putInt("2ndStyle", places[1]).commit();
+                    sPrefs.edit().putInt("3rdStyle", places[2]).commit();
+
                     startActivity(result_intent);
+                    finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "모든 문항에 응답해주세요", Toast.LENGTH_SHORT).show();
                 }

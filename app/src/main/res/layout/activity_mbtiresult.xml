@@ -246,8 +246,10 @@
 
     <Button
         android:id="@+id/btn_go_concept"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_round"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="나에게 맞는 인테리어는 ?"
         android:textAlignment="center"

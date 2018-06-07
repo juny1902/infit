@@ -1,12 +1,15 @@
 package com.example.ryan.infit;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 public class TypeActivity extends AppCompatActivity {
     TextView tv_type_title, tv_type_description;
@@ -18,8 +21,10 @@ public class TypeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
-        Intent i = getIntent();
-        person = (MBTI) i.getSerializableExtra("person");
+        SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sPrefs.getString("MBTIPerson","");
+        person = gson.fromJson(json,MBTI.class);
         tv_type_title = findViewById(R.id.tv_type_title);
         tv_type_description = findViewById(R.id.tv_type_description);
         btn_goNext = findViewById(R.id.btn_go_mbti_detailed);

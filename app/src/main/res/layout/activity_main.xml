@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:gravity="center"
     android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_weight="1.1"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -21,11 +21,11 @@
             android:layout_height="150dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/home_character" />
+            app:srcCompat="@mipmap/home_character_none" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,38 +46,38 @@
 
 
     <LinearLayout
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_start_test"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="160dp"
+                android:layout_height="140dp"
+                android:background="@mipmap/home_btn_mbti"
                 app:layout_constraintBottom_toTopOf="@+id/btn_go_interior"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/btn_go_interior"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="160dp"
+                android:layout_height="140dp"
                 android:background="@mipmap/home_btn_interior"
                 app:layout_constraintBottom_toTopOf="@+id/btn_my_info"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,15 +85,15 @@
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn_my_info"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="160dp"
+                android:layout_height="140dp"
                 android:background="@mipmap/home_btn_my"
                 app:layout_constraintBottom_toTopOf="@+id/btn_about_us"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,9 +101,8 @@
 
             <Button
                 android:id="@+id/btn_about_us"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="160dp"
+                android:layout_height="140dp"
                 android:background="@mipmap/home_btn_aboutus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

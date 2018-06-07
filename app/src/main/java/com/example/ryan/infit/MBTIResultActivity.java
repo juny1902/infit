@@ -1,12 +1,15 @@
 package com.example.ryan.infit;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 public class MBTIResultActivity extends AppCompatActivity {
 
@@ -30,7 +33,13 @@ public class MBTIResultActivity extends AppCompatActivity {
         tv_title_result = findViewById(R.id.tv_title_result);
         btn_go_concept = findViewById(R.id.btn_go_concept);
         Intent mbti_intent = getIntent();
-        person = (MBTI) mbti_intent.getSerializableExtra("person");
+
+
+        SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sPrefs.getString("MBTIPerson","");
+        person = gson.fromJson(json,MBTI.class);
+
         String mbti_result_string = person.getMBTI_Result_4words();
         int_MBTI_Result = person.getMBTI_Counts();
 

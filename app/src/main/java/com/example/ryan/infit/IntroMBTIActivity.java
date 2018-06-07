@@ -40,6 +40,7 @@ public class IntroMBTIActivity extends AppCompatActivity {
                     Intent mbti_test_page = new Intent(getApplicationContext(), MBTIActivity.class);
                     mbti_test_page.putExtra("person",person);
                     startActivity(mbti_test_page);
+                    finish();
                 }
             }
         });
