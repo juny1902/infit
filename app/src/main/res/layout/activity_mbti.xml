@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    android:background="@color/colorPrimary"
     tools:context=".MBTIActivity">
 
 
@@ -31,8 +30,6 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:background="@color/colorPrimary"
                 android:padding="10dp">
 
                 <LinearLayout
@@ -1178,10 +1175,10 @@
 
     <Button
         android:layout_margin="15dp"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:id="@+id/btn_finish"
         android:layout_width="280dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/btn_round"
         android:textColor="@color/white"
         android:layout_height="match_parent"
         android:layout_gravity="center"

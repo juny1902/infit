@@ -51,7 +51,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".First_Help_Activity"
-            android:theme="@style/Transparent"></activity>
+            android:theme="@style/Transparent" />
+        <activity android:name=".ShowroomActivity"></activity>
     </application>
 
 </manifest>

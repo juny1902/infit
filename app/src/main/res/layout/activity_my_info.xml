@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,36 +24,36 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="30dp"
-                    android:text="나는"
+                    android:layout_marginTop="20dp"
+                    android:text="내 정보"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="12pt" />
+                    android:textSize="8pt" />
 
-                <TextView
-                    android:id="@+id/tv_title_result"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="열정적인 활동가!"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="12pt" />
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.5"
+                android:layout_weight="1.9"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="50dp">
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:text="나는 ENTJ 대담한 통솔자형 !"
+                    android:textAlignment="center"
+                    android:textSize="9pt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="0dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -66,7 +64,7 @@
                         android:layout_weight="3"
                         android:text="E"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
 
                     <ProgressBar
                         android:id="@+id/progress_E"
@@ -98,12 +96,14 @@
                         android:layout_weight="3"
                         android:text="I"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -114,7 +114,7 @@
                         android:layout_weight="3"
                         android:text="S"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
 
                     <ProgressBar
                         android:id="@+id/progress_S"
@@ -146,12 +146,14 @@
                         android:layout_weight="3"
                         android:text="N"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -162,7 +164,7 @@
                         android:layout_weight="3"
                         android:text="T"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
 
                     <ProgressBar
                         android:id="@+id/progress_T"
@@ -194,12 +196,15 @@
                         android:layout_weight="3"
                         android:text="F"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
                 </LinearLayout>
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -210,7 +215,7 @@
                         android:layout_weight="3"
                         android:text="J"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
 
                     <ProgressBar
                         android:id="@+id/progress_J"
@@ -242,9 +247,136 @@
                         android:layout_weight="3"
                         android:text="P"
                         android:textAlignment="center"
-                        android:textSize="12pt" />
+                        android:textSize="8pt" />
                 </LinearLayout>
 
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"
+                android:gravity="center"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingMultiplier="1.2"
+                    android:paddingLeft="20dp"
+                    android:text="추천
+인테리어
+컨셉"
+                    android:textSize="8pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorBgDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:text="1"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="9pt" />
+
+                        <TextView
+                            android:id="@+id/tv_myroom_1st"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="모던"
+                            android:textAlignment="center"
+                            android:textSize="9pt" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorBgDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:text="2"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="9pt" />
+
+                        <TextView
+                            android:id="@+id/tv_myroom_2nd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="미니멀"
+                            android:textAlignment="center"
+                            android:textSize="9pt" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorBgDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:text="3"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="9pt" />
+
+                        <TextView
+                            android:id="@+id/tv_myroom_3rd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="클래식"
+                            android:textAlignment="center"
+                            android:textSize="9pt" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorBgDark" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -253,10 +385,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
-                android:background="@color/colorAccent"
-                android:text="초기화 하기"
+                android:background="@drawable/btn_round"
+                android:text="다시 검사하기"
                 android:textColor="@color/white"
-                android:textSize="12pt" />
+                android:textSize="10pt" />
         </LinearLayout>
 
         <ImageView
@@ -272,8 +404,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.285" />
+            app:layout_constraintVertical_bias="0.123" />
     </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천 인테리어 컨셉" />
 
 
 </LinearLayout>

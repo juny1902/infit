@@ -7,64 +7,10 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="30dp"
     tools:context=".First_Help_Activity">
 
-    <LinearLayout
+    <ImageView
+        android:src="@mipmap/arabang_bg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="'알아방' 이 처음이라면 ?"
-            android:textSize="12pt" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="◎ 심리검사를 통해 딱 맞는 스타일을 찾아보아요"
-            android:textSize="7pt" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="◎ 검사 결과를 친구들과 공유해보아요"
-            android:textSize="7pt" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="◎ 다양한 인테리어 소품을 둘러보아요"
-            android:textSize="7pt" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="◎ 원하는 소품이 있다면 오픈마켓으로 연결해요"
-            android:textSize="7pt" />
-
-
-    </LinearLayout>
-
-    <TextView
-        android:textColor="@color/white"
-        android:layout_marginTop="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="화면을 터치하여 시작하기"
-        android:textAlignment="center"
-        android:textSize="13pt" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>

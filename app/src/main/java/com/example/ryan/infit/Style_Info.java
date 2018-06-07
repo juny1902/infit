@@ -14,14 +14,14 @@ public class Style_Info {
             R.mipmap.ic_launcher,
     };
     static int[] index_to_cloud = {
-            R.mipmap.romantic_word_clude,
+            R.mipmap.romantic_cloud,
             R.mipmap.ic_launcher,
-            R.mipmap.classic_word_clude,
-            R.mipmap.hightech_word_clude,
-            R.mipmap.elegance_word_clude,
+            R.mipmap.classic_cloud,
+            R.mipmap.classic_cloud, // Hightech
+            R.mipmap.elegance_cloud,
             R.mipmap.ic_launcher,
-            R.mipmap.morden_word_clude,
-            R.mipmap.minimal_word_clude,
+            R.mipmap.modern_cloud,
+            R.mipmap.minimal_cloud,
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
