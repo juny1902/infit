@@ -1,5 +1,16 @@
 <resources>
 
+    <style name="buttonBarButtonStyle" parent="Widget.AppCompat.Button.Borderless.Colored"></style>
+    <style name="buttonBarButtonStyle.Positive">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+\
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+
+        <item name="buttonBarNegativeButtonStyle">@style/buttonBarButtonStyle.Positive</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->

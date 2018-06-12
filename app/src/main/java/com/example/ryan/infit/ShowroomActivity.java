@@ -130,6 +130,8 @@ public class ShowroomActivity extends AppCompatActivity
             }
         } else {
             im_mbti_character.setImageDrawable(getDrawable(R.mipmap.home_character_none));
+            tv_drawer_mbti.setText("검사 결과가 없습니다");
+            tv_drawer_type.setText("홈으로 돌아가 검사를 시작해주세요");
         }
 
         return true;

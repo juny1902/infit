@@ -68,7 +68,7 @@ public class MBTIActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
 
         builder.setTitle("검사 중단")
                 .setMessage("\n검사를 중단하시겠습니까?\n\n(진행상황은 저장되지 않습니다)\n")

@@ -58,6 +58,7 @@
 
                 <RadioButton
                     android:id="@+id/radio_male"
+                    android:buttonTint="@color/colorAccent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
@@ -66,6 +67,7 @@
 
                 <RadioButton
                     android:id="@+id/radio_female"
+                    android:buttonTint="@color/colorAccent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -99,6 +101,7 @@
 
                 <EditText
                     android:id="@+id/ed_age"
+                    android:backgroundTint="@color/colorAccent"
                     android:layout_width="85dp"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"

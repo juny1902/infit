@@ -1,8 +1,10 @@
 package com.example.ryan.infit;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     Button btn_go_interior;
     ImageView im_mbti_character;
     MBTI person;
-
+    SharedPreferences sPrefs;
+    Gson gson;
+    String json;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         btn_go_test = findViewById(R.id.btn_start_test);
         btn_go_myInfo = findViewById(R.id.btn_my_info);
         im_mbti_character = findViewById(R.id.imageView_user_character);
+
+        sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
+        gson = new Gson();
+        json = sPrefs.getString("MBTIPerson", "");
 
         btn_go_interior.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +56,36 @@ public class MainActivity extends AppCompatActivity {
         btn_go_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start_mbti_intent = new Intent(getApplicationContext(), IntroMBTIActivity.class);
-                startActivity(start_mbti_intent);
+                if(person != null)
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(),R.style.MyAlertDialogStyle);
+
+                    builder.setTitle("검사하기")
+                            .setMessage("\n이전 검사 결과가 있습니다.\n\n초기화 하고 다시 검사를 시작할까요?\n")
+                            .setCancelable(false)
+                            .setPositiveButton("시작", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent start_mbti_intent = new Intent(getApplicationContext(), IntroMBTIActivity.class);
+                                    startActivity(start_mbti_intent);
+
+                                }
+                            })
+                            .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+
+                    AlertDialog dialog = builder.create();
+
+                    dialog.show();
+                }else{
+                    Intent start_mbti_intent = new Intent(getApplicationContext(), IntroMBTIActivity.class);
+                    startActivity(start_mbti_intent);
+                }
+
             }
         });
         btn_go_myInfo.setOnClickListener(new View.OnClickListener() {
@@ -64,9 +100,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sPrefs.getString("MBTIPerson", "");
+
         if (json != "") {
             person = gson.fromJson(json, MBTI.class);
             switch (person.getMBTI_Result_4words()) {

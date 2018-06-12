@@ -435,7 +435,6 @@
             android:layout_marginTop="18dp"
             android:background="#00000000"
             android:gravity="center"
-            android:text="공유하기"
             android:textColor="@color/white"
             android:textSize="6pt"
             app:layout_constraintEnd_toEndOf="parent"

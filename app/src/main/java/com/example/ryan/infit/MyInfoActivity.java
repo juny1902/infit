@@ -193,7 +193,7 @@ public class MyInfoActivity extends AppCompatActivity {
     }
 
     private void shareIt() {
-        Uri uri = FileProvider.getUriForFile(getApplicationContext(), "com.bignerdranch.android.test.fileprovider", imagePath);
+        Uri uri = FileProvider.getUriForFile(getApplicationContext(), "com.example.ryan.infit.fileprovider", imagePath);
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("image/*");
         String shareBody = "나의 성향에 딱 알맞은 인테리어.";
