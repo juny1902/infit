@@ -29,9 +29,11 @@ public class ConceptActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_concept);
+
         btn_1st = findViewById(R.id.btn_1st);
         btn_2nd = findViewById(R.id.btn_2nd);
         btn_3rd = findViewById(R.id.btn_3rd);
+
         im_1st = findViewById(R.id.img_1st);
         im_2nd = findViewById(R.id.img_2nd);
         im_3rd = findViewById(R.id.img_3rd);
@@ -39,12 +41,15 @@ public class ConceptActivity extends AppCompatActivity {
         SharedPreferences sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sPrefs.getString("MBTIPerson", "");
+
         int style_1 = sPrefs.getInt("1stStyle", 1);
         int style_2 = sPrefs.getInt("2ndStyle", 2);
         int style_3 = sPrefs.getInt("3rdStyle", 3);
+
         final int[] places_t = {
                 style_1, style_2, style_3
         };
+
         person = gson.fromJson(json, MBTI.class);
 
 

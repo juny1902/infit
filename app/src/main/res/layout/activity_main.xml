@@ -19,12 +19,15 @@
             android:id="@+id/imageView_user_character"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="72dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.029"
             app:srcCompat="@mipmap/home_character_none" />
 
         <TextView
@@ -47,28 +50,26 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="vertical"
-        android:paddingBottom="30dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_start_test"
-                android:layout_width="160dp"
-                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@mipmap/home_btn_mbti"
                 app:layout_constraintBottom_toTopOf="@+id/btn_go_interior"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,8 +77,9 @@
 
             <Button
                 android:id="@+id/btn_go_interior"
-                android:layout_width="160dp"
-                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@mipmap/home_btn_interior"
                 app:layout_constraintBottom_toTopOf="@+id/btn_my_info"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,15 +87,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btn_my_info"
-                android:layout_width="160dp"
-                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@mipmap/home_btn_my"
                 app:layout_constraintBottom_toTopOf="@+id/btn_about_us"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +104,9 @@
 
             <Button
                 android:id="@+id/btn_about_us"
-                android:layout_width="160dp"
-                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:background="@mipmap/home_btn_aboutus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_go_about;
     Button btn_go_test;
     Button btn_go_myInfo;
+    Button btn_go_interior;
     ImageView im_mbti_character;
     MBTI person;
 
@@ -24,12 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
         Intent help = new Intent(getApplicationContext(), First_Help_Activity.class);
         startActivity(help);
+        btn_go_interior = findViewById(R.id.btn_go_interior);
         btn_go_about = findViewById(R.id.btn_about_us);
         btn_go_test = findViewById(R.id.btn_start_test);
         btn_go_myInfo = findViewById(R.id.btn_my_info);
         im_mbti_character = findViewById(R.id.imageView_user_character);
 
-
+        btn_go_interior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent interior_intent = new Intent(getApplicationContext(), ShowroomActivity.class);
+                startActivity(interior_intent);
+            }
+        });
         btn_go_about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
