@@ -68,7 +68,7 @@ public class MBTIActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
 
         builder.setTitle("검사 중단")
                 .setMessage("\n검사를 중단하시겠습니까?\n\n(진행상황은 저장되지 않습니다)\n")
@@ -117,6 +117,7 @@ public class MBTIActivity extends AppCompatActivity {
 
         MBTI_Tab = findViewById(R.id.MBTI_TAB);
         MBTI_Tab.setup();
+        
 
         finish_test = findViewById(R.id.btn_finish);
 
@@ -125,6 +126,7 @@ public class MBTIActivity extends AppCompatActivity {
         TabHost.TabSpec tab2 = MBTI_Tab.newTabSpec("2").setContent(R.id.tab2).setIndicator("2");
         TabHost.TabSpec tab3 = MBTI_Tab.newTabSpec("3").setContent(R.id.tab3).setIndicator("3");
         TabHost.TabSpec tab4 = MBTI_Tab.newTabSpec("4").setContent(R.id.tab4).setIndicator("4");
+
         MBTI_Tab.addTab(tab1);
         MBTI_Tab.addTab(tab2);
         MBTI_Tab.addTab(tab3);
@@ -141,12 +143,12 @@ public class MBTIActivity extends AppCompatActivity {
                     person.setMBTI_Counts(getMBTIResult());
                     Intent result_intent = new Intent(getApplicationContext(), TypeActivity.class);
 
-                    SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);
+                    SharedPreferences sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
 
                     SharedPreferences.Editor prefsEditor = sPrefs.edit();
                     Gson gson = new Gson();
                     String json = gson.toJson(person);
-                    prefsEditor.putString("MBTIPerson",json);
+                    prefsEditor.putString("MBTIPerson", json);
                     prefsEditor.commit();
                     int[] places;
 

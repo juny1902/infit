@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".MBTIActivity">
@@ -24,7 +25,11 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:tabStripEnabled="true"
+                android:tabStripLeft="@color/colorAccent"
+                android:tabStripRight="@color/colorAccent" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"

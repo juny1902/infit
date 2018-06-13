@@ -8,6 +8,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,8 +19,13 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ShowroomActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
     SharedPreferences sPrefs;
     ImageView im_mbti_character;
     TextView tv_drawer_mbti, tv_drawer_type;
@@ -32,23 +40,25 @@ public class ShowroomActivity extends AppCompatActivity
         setContentView(R.layout.activity_showroom);
         setTitle("인테리어 구경하기");
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -61,7 +71,7 @@ public class ShowroomActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.showroom, menu);
 
-         sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
+        sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
         gson = new Gson();
         json = sPrefs.getString("MBTIPerson", "");
 
@@ -165,11 +175,14 @@ public class ShowroomActivity extends AppCompatActivity
             curStyle = 5;
         } else if (id == R.id.btn_draw_6) {
             curStyle = 6;
-        } else if (id == R.id.btn_draw_home){
+        } else if (id == R.id.btn_draw_home) {
             finish();
-        } else if (id == R.id.btn_draw_my_info){
-            Intent my_info = new Intent(getApplicationContext(),MyInfoActivity.class);
+        } else if (id == R.id.btn_draw_my_info) {
+            Intent my_info = new Intent(getApplicationContext(), MyInfoActivity.class);
             startActivity(my_info);
+        } else if (id == R.id.btn_go_room_sample){
+            Intent room_sample = new Intent(getApplicationContext(), RoomSample.class);
+            startActivity(room_sample);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
