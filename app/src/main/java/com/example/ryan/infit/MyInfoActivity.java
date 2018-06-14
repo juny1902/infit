@@ -162,10 +162,23 @@ public class MyInfoActivity extends AppCompatActivity {
         btn_myinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requestAppPermissions();
-                Bitmap bitmap = takeScreenshot();
-                saveBitmap(bitmap);
-                shareIt();
+                if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
+                        ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                    btn_back.setVisibility(Button.INVISIBLE);
+                    btn_reset.setVisibility(Button.INVISIBLE);
+                    btn_myinfo.setVisibility(Button.INVISIBLE);
+                    Bitmap bitmap = takeScreenshot();
+                    saveBitmap(bitmap);
+                    shareIt();
+                    btn_back.setVisibility(Button.VISIBLE);
+                    btn_reset.setVisibility(Button.VISIBLE);
+                    btn_myinfo.setVisibility(Button.VISIBLE);
+                }
+                else{
+                    requestAppPermissions();
+                }
+
+
             }
         });
 
@@ -203,7 +216,9 @@ public class MyInfoActivity extends AppCompatActivity {
 
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
+
     int REQUEST_WRITE_STORAGE_REQUEST_CODE = 1;
+
     private void requestAppPermissions() {
         if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             return;
@@ -214,11 +229,12 @@ public class MyInfoActivity extends AppCompatActivity {
         }
 
         ActivityCompat.requestPermissions(this,
-                new String[] {
+                new String[]{
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE
                 }, REQUEST_WRITE_STORAGE_REQUEST_CODE); // your request code
     }
+
     private boolean hasReadPermissions() {
         return (ContextCompat.checkSelfPermission(getBaseContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
     }
