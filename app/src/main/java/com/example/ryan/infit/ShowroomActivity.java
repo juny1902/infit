@@ -212,8 +212,6 @@ public class ShowroomActivity extends AppCompatActivity
             curStyle = 5;
         } else if (id == R.id.btn_draw_6) {
             curStyle = 6;
-        } else if (id == R.id.btn_draw_home) {
-            finish();
         } else if (id == R.id.btn_draw_my_info) {
             Intent my_info = new Intent(getApplicationContext(), MyInfoActivity.class);
             startActivity(my_info);
