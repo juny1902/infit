@@ -90,27 +90,27 @@ public class MBTI implements Serializable {
     String getMBTI_character_description() {
         switch (MBTI_Result_4words) {
             case "INTJ":
-                return "  전체적인 부분을 조합하여 비전을 제시하는 사람이군요!";
+                return "  전체적인 부분을 조합하여\n비전을 제시하는 사람이군요!";
             case "INTP":
-                return "  비전적인 관점을 가지고 있는 뛰어난 전략가군요!";
+                return "  비전적인 관점을 가지고 있는\n뛰어난 전략가군요!";
             case "ENTJ":
-                return "  비전을 가지고 사람들을 활력적으로 이끌어가는 사람이군요!";
+                return "  비전을 가지고 사람들을\n활력적으로 이끌어가는 사람이군요!";
             case "ENTP":
-                return "  풍부한 상상력을 가지고 새로운 것에 도전하는 사람이군요!";
+                return "  풍부한 상상력을 가지고\n새로운 것에 도전하는 사람이군요!";
             case "INFJ":
-                return "  사람과 관련된 뛰어난 통찰력을 가지고 있는 사람이군요!";
+                return "  사람과 관련된 뛰어난 통찰력을\n가지고 있는 사람이군요!";
             case "INFP":
-                return "  이상적인 세상을 만들어가는 사람이군요!";
+                return "  이상적인 세상을\n만들어가는 사람이군요!";
             case "ENFJ":
-                return "  타인의 성장을 도모하고 협동하는 사람이군요!";
+                return "  타인의 성장을 도모하고\n협동하는 사람이군요!";
             case "ENFP":
-                return "  열정적으로 새로운 관계를 만드는 사람이군요!";
+                return "  열정적으로 새로운\n관계를 만드는 사람이군요!";
             case "ISTJ":
-                return "  한 번 시작한 일을 끝까지 해내는 사람이군요!";
+                return "  한 번 시작한 일을\n끝까지 해내는 사람이군요!";
             case "ISFJ":
-                return "  성실하고 온화하며 협조를 잘하는 사람이군요!";
+                return "  성실하고 온화하며\n협조를 잘하는 사람이군요!";
             case "ESTJ":
-                return "  사무적, 실용적, 현실적으로 일을 많이 하는 사람이군요!";
+                return "  사무적, 실용적, 현실적으로\n일을 많이 하는 사람이군요!";
             case "ESFJ":
                 return "  친절과 현실감을 바탕으로 타인에게 봉사하는 사람이군요!";
             case "ISTP":

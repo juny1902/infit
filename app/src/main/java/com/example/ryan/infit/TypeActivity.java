@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 public class TypeActivity extends AppCompatActivity {
-    TextView tv_type_title, tv_type_description;
+    TextView tv_type_title, tv_type_description, tv_type_what;
     ImageView im_mbti_character;
     Button btn_goNext;
     MBTI person;
@@ -27,12 +27,12 @@ public class TypeActivity extends AppCompatActivity {
         person = gson.fromJson(json,MBTI.class);
         tv_type_title = findViewById(R.id.tv_type_title);
         tv_type_description = findViewById(R.id.tv_type_description);
+        tv_type_what = findViewById(R.id.tv_type_what);
         btn_goNext = findViewById(R.id.btn_go_mbti_detailed);
         im_mbti_character = findViewById(R.id.im_type_character);
-
-        tv_type_title.setText(person.getMBTI_character_text() + "!");
+        tv_type_title.setText(person.getMBTI_character_text());
         tv_type_description.setText(person.getMBTI_character_description());
-
+        tv_type_what.setText(tv_type_what.getText().toString() + person.getMBTI_Result_4words());
         switch (person.getMBTI_Result_4words()) {
             case "INTJ":
                 im_mbti_character.setImageDrawable(getDrawable(R.mipmap.chara_intj));

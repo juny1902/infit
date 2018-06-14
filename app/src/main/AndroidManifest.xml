@@ -24,7 +24,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".AboutActivity"
             android:screenOrientation="portrait" />
@@ -42,9 +43,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ConceptActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".InfoActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ConceptRoomActivity"
@@ -70,9 +68,9 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <activity android:name=".StylesActivity" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".RoomSample"></activity>
+        <activity android:name=".RoomSample" />
+        <activity android:name=".LoadingActivity"/>
     </application>
 
 </manifest>

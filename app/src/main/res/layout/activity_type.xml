@@ -3,69 +3,155 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context=".TypeActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="당신은..."
-        android:textColor="@color/white"
-        android:textSize="13pt" />
-    <TextView
-        android:id="@+id/tv_type_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:text="용의주도한 사업가 !"
-        android:textSize="13pt" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="30dp"
-        android:layout_weight="1"
-        android:background="#FFFFFF">
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="분석 결과"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="8pt" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/im_type_character"
+                android:contentDescription="shining"
+                android:scaleType="fitXY"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
-                android:layout_marginTop="30dp"
-                android:src="@mipmap/ic_launcher" />
-
-            <TextView
-                android:id="@+id/tv_type_description"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="30dp"
-                android:text="  ㅇㅇㅇㅇ하는 당신은 ㅇㅇㅇ형 ! 이렇고 저렇고 그렇다."
-                android:textSize="7pt" />
+                android:gravity="center"
+                android:src="@mipmap/shiny" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </ScrollView>
+            <ImageView
+                android:contentDescription="yourchara"
+                android:id="@+id/im_type_character"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:src="@mipmap/home_character_none" />
+        </LinearLayout>
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/btn_go_mbti_detailed"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/white"
-        android:layout_width="300dp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:text="자세히 알아보기"
-        android:textSize="12pt" />
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorBgDark" />
+
+        <TextView
+            android:id="@+id/tv_type_what"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="당신은 "
+            android:textColor="@color/colorBgDark"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="용의주도한 사업가"
+                android:textColor="@color/colorPrimary"
+                android:textSize="8pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text=" 입니다!"
+                android:textColor="@color/colorBgDark"
+                android:textSize="8pt"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorBgDark" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_type_description"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:text="  ㅇㅇㅇㅇ하는 당신은 ㅇㅇㅇ형 ! 이렇고 저렇고 그렇다."
+        android:textSize="7pt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_go_mbti_detailed"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_round_blue"
+            android:text="자세히 알아보기"
+            android:textColor="@color/white"
+            android:textSize="10pt" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

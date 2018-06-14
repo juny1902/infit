@@ -4,16 +4,21 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,9 +28,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ShowroomActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     SharedPreferences sPrefs;
     ImageView im_mbti_character;
     TextView tv_drawer_mbti, tv_drawer_type;
@@ -33,14 +36,13 @@ public class ShowroomActivity extends AppCompatActivity
     Gson gson;
     String json;
     int curStyle;
+    int selection;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showroom);
         setTitle("인테리어 구경하기");
-
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,6 +56,41 @@ public class ShowroomActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        RecyclerView recyclerView = findViewById(R.id.recyclerView2);
+        GridLayoutManager gManager = new GridLayoutManager(getApplicationContext(),2);
+        recyclerView.setLayoutManager(gManager); // set LayoutManager to RecyclerView
+        //  call the constructor of CustomAdapter to send the reference and data to Adapter
+        ArrayList curStyleImages;
+        switch (selection) {
+            case 1:
+                curStyleImages = Style_Info.minimal_rooms;
+                break;
+            case 2:
+                curStyleImages = Style_Info.classic_rooms;
+                break;
+            case 3:
+                curStyleImages = Style_Info.elegance_rooms;
+                break;
+            case 4:
+                curStyleImages = Style_Info.modern_rooms;
+                break;
+            case 5:
+                curStyleImages = Style_Info.hightech_rooms;
+                break;
+            case 6:
+                curStyleImages = Style_Info.romantic_rooms;
+                break;
+            default:
+                curStyleImages = Style_Info.classic_rooms;
+
+        }
+        CustomAdapter customAdapter = new CustomAdapter(ShowroomActivity.this, Style_Info.roomNames, curStyleImages);
+        recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 
     @Override
@@ -188,5 +225,29 @@ public class ShowroomActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.im_btn_tab_1:
+                selection = 0;
+                break;
+            case R.id.im_btn_tab_2:
+                selection = 1;
+                break;
+            case R.id.im_btn_tab_3:
+                selection = 2;
+                break;
+            case R.id.im_btn_tab_4:
+                selection = 3;
+                break;
+            case R.id.im_btn_tab_5:
+                selection = 4;
+                break;
+            default:
+                selection = 0;
+        }
+        onResume();
     }
 }

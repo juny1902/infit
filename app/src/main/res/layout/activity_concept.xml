@@ -3,131 +3,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ConceptActivity">
-
-    <TextView
-        android:id="@+id/text_concept"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="당신에게 추천하는 컨셉"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="10pt" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp"
-        android:background="@color/white"
-        android:orientation="vertical"
-        android:padding="30dp">
+        android:layout_weight="3"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/frame_1st"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/img_1st"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:contentDescription="1등 스타일"
-                android:cropToPadding="false"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/ic_launcher" />
-
-        </FrameLayout>
-
-        <Button
-            android:id="@+id/btn_1st"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:text="엔티크"
+            android:layout_marginTop="10dp"
+            android:text="컨셉 추천"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="14pt" />
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="당신의 성향과 가장 잘 어울리는\n인테리어 컨셉입니다."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="7pt" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="50dp">
 
         <LinearLayout
+            android:id="@+id/layout_1st"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClickLayout"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="1등 스타일"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/medal_1st" />
 
-                <FrameLayout
-                    android:id="@+id/frame_2nd"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_place_1st"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="하이테크 인테리어"
+                android:textAlignment="center"
+                android:textColor="@color/colorBgDark"
+                android:textSize="7pt" />
 
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/next_accent" />
 
-                    <ImageView
-                        android:id="@+id/img_2nd"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:contentDescription="2등 이미지"
-                        android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
 
-                </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorBgDark" />
 
-                <Button
-                    android:id="@+id/btn_2nd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:background="@color/colorPrimary"
-                    android:text="미니멀"
-                    android:textColor="@color/white"
-                    android:textSize="10pt" />
-            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_2nd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClickLayout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="2등 스타일"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/medal_2nd" />
 
-                <FrameLayout
-                    android:id="@+id/frame_3rd"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_place_2nd"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="엔티크 인테리어"
+                android:textAlignment="center"
+                android:textColor="@color/colorBgDark"
+                android:textSize="7pt" />
 
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/net_normal" />
 
-                    <ImageView
-                        android:id="@+id/img_3rd"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:contentDescription="3등 스타일"
-                        android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
 
-                </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorBgDark" />
 
-                <Button
-                    android:id="@+id/btn_3rd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:background="@color/colorPrimary"
-                    android:text="하이테크"
-                    android:textColor="@color/white"
-                    android:textSize="10pt" />
-            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_3rd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClickLayout">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="3등 스타일"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/medal_3rd" />
+
+            <TextView
+                android:id="@+id/tv_place_3rd"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="모던 인테리어"
+                android:textAlignment="center"
+                android:textColor="@color/colorBgDark"
+                android:textSize="7pt" />
+
+            <ImageView
+                android:contentDescription="next"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/net_normal" />
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

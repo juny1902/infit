@@ -28,11 +28,10 @@ public class MBTIResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mbtiresult);
         prog_array = new ProgressBar[8];
-        tv_MBTI_string = findViewById(R.id.tv_MBTI_string);
+        tv_MBTI_string = findViewById(R.id.tv_type_result);
         tv_MBTI_Result = findViewById(R.id.tv_MBTI_result);
         tv_title_result = findViewById(R.id.tv_title_result);
         btn_go_concept = findViewById(R.id.btn_go_concept);
-        Intent mbti_intent = getIntent();
 
 
         SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);

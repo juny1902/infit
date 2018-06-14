@@ -117,7 +117,7 @@ public class MBTIActivity extends AppCompatActivity {
 
         MBTI_Tab = findViewById(R.id.MBTI_TAB);
         MBTI_Tab.setup();
-        
+
 
         finish_test = findViewById(R.id.btn_finish);
 
@@ -141,7 +141,7 @@ public class MBTIActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isAllChecked()) {
                     person.setMBTI_Counts(getMBTIResult());
-                    Intent result_intent = new Intent(getApplicationContext(), TypeActivity.class);
+                    Intent loadingIntent = new Intent(getApplicationContext(), LoadingActivity.class);
 
                     SharedPreferences sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
 
@@ -209,7 +209,7 @@ public class MBTIActivity extends AppCompatActivity {
                     sPrefs.edit().putInt("2ndStyle", places[1]).commit();
                     sPrefs.edit().putInt("3rdStyle", places[2]).commit();
 
-                    startActivity(result_intent);
+                    startActivity(loadingIntent);
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "모든 문항에 응답해주세요", Toast.LENGTH_SHORT).show();

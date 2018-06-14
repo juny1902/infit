@@ -12,7 +12,7 @@ public class ConceptRoomActivity extends AppCompatActivity {
     TextView tv_style, tv_style_description;
     ImageView img_concept_room, img_saying_character;
     Button btn_go_shopping;
-
+    int idx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,9 @@ public class ConceptRoomActivity extends AppCompatActivity {
         btn_go_shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ShowroomActivity.class);
+
+
+                Intent intent = new Intent(getApplicationContext(),RoomSample.class);
                 intent.putExtra("style",style_index);
                 startActivity(intent);
             }
