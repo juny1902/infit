@@ -1,4 +1,4 @@
-package com.example.ryan.infit;
+package com.example.ryan.arabang;
 
 import java.io.Serializable;
 // Activity 간 객체 전달을 위한 Serializable 구현.

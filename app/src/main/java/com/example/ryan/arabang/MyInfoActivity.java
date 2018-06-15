@@ -1,4 +1,4 @@
-package com.example.ryan.infit;
+package com.example.ryan.arabang;
 
 import android.Manifest;
 import android.content.Intent;

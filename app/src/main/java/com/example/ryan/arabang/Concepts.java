@@ -1,4 +1,4 @@
-package com.example.ryan.infit;
+package com.example.ryan.arabang;
 
 public class Concepts {
     int[] img_classic = {

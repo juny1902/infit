@@ -1,4 +1,4 @@
-package com.example.ryan.infit;
+package com.example.ryan.arabang;
 
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;

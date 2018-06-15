@@ -1,4 +1,4 @@
-package com.example.ryan.infit;
+package com.example.ryan.arabang;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
