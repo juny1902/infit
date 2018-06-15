@@ -4,46 +4,43 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ShowroomActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     SharedPreferences sPrefs;
     ImageView im_mbti_character;
     TextView tv_drawer_mbti, tv_drawer_type;
+    String[] links;
     MBTI person;
     Gson gson;
     String json;
     int curStyle;
-    int selection;
+    ArrayList[] selection;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showroom);
         setTitle("인테리어 구경하기");
-
+        curStyle = 1;
+        selection = Furnitures.BED_MIPMAPS;
+        links = Furnitures.BED_LINKS;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -62,34 +59,11 @@ public class ShowroomActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         RecyclerView recyclerView = findViewById(R.id.recyclerView2);
-        GridLayoutManager gManager = new GridLayoutManager(getApplicationContext(),2);
+        GridLayoutManager gManager = new GridLayoutManager(getApplicationContext(), 2);
         recyclerView.setLayoutManager(gManager); // set LayoutManager to RecyclerView
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        ArrayList curStyleImages;
-        switch (selection) {
-            case 1:
-                curStyleImages = Style_Info.minimal_rooms;
-                break;
-            case 2:
-                curStyleImages = Style_Info.classic_rooms;
-                break;
-            case 3:
-                curStyleImages = Style_Info.elegance_rooms;
-                break;
-            case 4:
-                curStyleImages = Style_Info.modern_rooms;
-                break;
-            case 5:
-                curStyleImages = Style_Info.hightech_rooms;
-                break;
-            case 6:
-                curStyleImages = Style_Info.romantic_rooms;
-                break;
-            default:
-                curStyleImages = Style_Info.classic_rooms;
-
-        }
-        CustomAdapter customAdapter = new CustomAdapter(ShowroomActivity.this, Style_Info.roomNames, curStyleImages);
+        ArrayList curStyleImages = selection[curStyle - 1];
+        CustomAdapter customAdapter = new CustomAdapter(ShowroomActivity.this, Furnitures.names, curStyleImages,links[curStyle-1]);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 
@@ -215,37 +189,47 @@ public class ShowroomActivity extends AppCompatActivity
         } else if (id == R.id.btn_draw_my_info) {
             Intent my_info = new Intent(getApplicationContext(), MyInfoActivity.class);
             startActivity(my_info);
-        } else if (id == R.id.btn_go_room_sample){
+        } else if (id == R.id.btn_go_room_sample) {
             Intent room_sample = new Intent(getApplicationContext(), RoomSample.class);
-            room_sample.putExtra("VISIBILITY_SHOWROOM",false);
+            room_sample.putExtra("VISIBILITY_SHOWROOM", false);
             startActivity(room_sample);
+        } else if (id == R.id.btn_go_concept_description) {
+            Intent concept = new Intent(getApplicationContext(), StyleInfoActivity.class);
+            startActivity(concept);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+        onResume();
         return true;
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.im_btn_tab_1:
-                selection = 0;
+                selection = Furnitures.BED_MIPMAPS; // 전체 (ROOM)
+                links = Furnitures.BED_LINKS;
                 break;
             case R.id.im_btn_tab_2:
-                selection = 1;
+                selection = Furnitures.ROOM_MIPMAPS; //
+                links = Furnitures.ROOM_LINKS;
                 break;
             case R.id.im_btn_tab_3:
-                selection = 2;
+                selection = Furnitures.KITCHEN_MIPMAPS;
+                links = Furnitures.KITCHEN_LINKS;
                 break;
             case R.id.im_btn_tab_4:
-                selection = 3;
+                selection = Furnitures.BATH_MIPMAPS;
+                links = Furnitures.BATH_LINKS;
                 break;
             case R.id.im_btn_tab_5:
-                selection = 4;
+                links = Furnitures.OFFICE_LINKS;
+                selection = Furnitures.OFFICE_MIPMAPS;
                 break;
             default:
-                selection = 0;
+                links = Furnitures.BED_LINKS;
+                selection = Furnitures.BED_MIPMAPS;
         }
         onResume();
     }

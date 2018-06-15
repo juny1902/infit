@@ -14,7 +14,6 @@ public class ConceptRoomActivity extends AppCompatActivity {
     ImageView img_concept_room;
     Button btn_go_shopping;
     ImageButton btn_back;
-    int idx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

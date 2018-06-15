@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/arabang_icon"
         android:label="@string/app_name"
@@ -71,7 +70,8 @@
 
         <activity android:name=".SecondActivity" />
         <activity android:name=".RoomSample" />
-        <activity android:name=".LoadingActivity"/>
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".StyleInfoActivity"></activity>
     </application>
 
 </manifest>

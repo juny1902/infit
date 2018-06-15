@@ -2,9 +2,7 @@ package com.example.ryan.infit;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +12,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter {
+public class VariableAdapter extends RecyclerView.Adapter {
     ArrayList personNames;
     ArrayList personImages;
     Context context;
     String web_destination;
 
-    public CustomAdapter(Context context, ArrayList personNames, ArrayList personImages, @Nullable String web_destination) {
+    public VariableAdapter(Context context, ArrayList personNames, ArrayList personImages) {
         this.context = context;
         this.personNames = personNames;
         this.personImages = personImages;
@@ -29,11 +27,11 @@ public class CustomAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public VariableAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // infalte the item Layout
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayout, parent, false);
         // set the view's size, margins, paddings and layout parameters
-        MyViewHolder vh = new MyViewHolder(v); // pass the view to View Holder
+        VariableAdapter.MyViewHolder vh = new VariableAdapter.MyViewHolder(v); // pass the view to View Holder
         return vh;
     }
 
@@ -46,10 +44,12 @@ public class CustomAdapter extends RecyclerView.Adapter {
         mHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=" + web_destination));
-                view.getContext().startActivity(intent);
+                // open another activity on item click
+                Intent intent = new Intent(context, SecondActivity.class);
+                context.startActivity(intent); // start Intent
             }
         });
+
     }
 
     @Override

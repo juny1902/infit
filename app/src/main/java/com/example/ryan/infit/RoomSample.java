@@ -174,7 +174,7 @@ public class RoomSample extends AppCompatActivity {
                 curStyleImages = Style_Info.classic_rooms;
 
         }
-        CustomAdapter customAdapter = new CustomAdapter(RoomSample.this, Style_Info.roomNames, curStyleImages);
+        VariableAdapter customAdapter = new VariableAdapter(RoomSample.this, Style_Info.roomNames, curStyleImages);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
     }
 }

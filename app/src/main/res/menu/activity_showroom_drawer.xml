@@ -7,15 +7,18 @@
             <item
                 android:id="@+id/btn_draw_my_info"
                 android:icon="@mipmap/sidemenu_my"
+                android:iconTint="@color/colorAccent"
                 android:title="내 정보" />
             <item
                 android:id="@+id/btn_go_room_sample"
                 android:icon="@mipmap/sidemenu_home"
+                android:iconTint="@color/colorAccent"
                 android:title="방 예제" />
             <item
-                android:icon="@mipmap/sidebar_how1"
                 android:id="@+id/btn_go_concept_description"
-                android:title="컨셉 설명"/>
+                android:icon="@mipmap/sidebar_how1"
+                android:iconTint="@color/colorAccent"
+                android:title="컨셉 설명" />
         </menu>
     </item>
     <group android:checkableBehavior="single">
@@ -39,7 +42,6 @@
             android:title="로맨틱" />
 
     </group>
-
 
 
 </menu>
