@@ -8,17 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class RoomSample extends AppCompatActivity {
     int curStyle;
     private TabLayout tabLayout;
+    ImageButton btn_go_back_from_room, btn_go_shop_from_room;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,33 @@ public class RoomSample extends AppCompatActivity {
         setContentView(R.layout.activity_room_sample);
 
         tabLayout = findViewById(R.id.tab_layout);
+        btn_go_back_from_room = findViewById(R.id.go_back_from_room);
+        btn_go_shop_from_room = findViewById(R.id.go_shop_from_room);
+        Intent intent2 = getIntent();
+        boolean v_showroom = intent2.getBooleanExtra("VISIBILITY_SHOWROOM",true);
+        if(v_showroom){
+            btn_go_shop_from_room.setVisibility(ImageButton.VISIBLE);
+        }else{
+            btn_go_shop_from_room.setVisibility(ImageButton.INVISIBLE);
+        }
+        btn_go_shop_from_room.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ShowroomActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                        | Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        | Intent.FLAG_ACTIVITY_SINGLE_TOP
+                        | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btn_go_back_from_room.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         Intent intent = getIntent(); // Intent from previous intent.
         int idx = intent.getIntExtra("style", 2);
         switch (idx) {
@@ -63,12 +90,12 @@ public class RoomSample extends AppCompatActivity {
         if (root instanceof LinearLayout) {
             ((LinearLayout) root).setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
             GradientDrawable drawable = new GradientDrawable();
-            drawable.setColor(getResources().getColor(R.color.colorBgDark,getTheme()));
+            drawable.setColor(getResources().getColor(R.color.colorBgDark, getTheme()));
             drawable.setSize(2, 1);
             ((LinearLayout) root).setDividerPadding(20);
             ((LinearLayout) root).setDividerDrawable(drawable);
         }
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorAccent,getTheme()));
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorAccent, getTheme()));
         tabLayout.getTabAt(curStyle - 1).select();
         onResume();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

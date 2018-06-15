@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class MBTIResultActivity extends AppCompatActivity {
     TextView tv_MBTI_string;
     TextView tv_MBTI_Result;
     Button btn_go_concept;
+    ImageButton btn_back;
     ProgressBar[] prog_array;
     int[] prog_IDs = {R.id.progress_E, R.id.progress_I, R.id.progress_S, R.id.progress_N, R.id.progress_T, R.id.progress_F, R.id.progress_J, R.id.progress_P};
 
@@ -32,7 +34,14 @@ public class MBTIResultActivity extends AppCompatActivity {
         tv_MBTI_Result = findViewById(R.id.tv_MBTI_result);
         tv_title_result = findViewById(R.id.tv_title_result);
         btn_go_concept = findViewById(R.id.btn_go_concept);
+        btn_back = findViewById(R.id.go_back_from_mbti_result);
 
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         SharedPreferences sPrefs = getSharedPreferences("MBTIResult",MODE_PRIVATE);
         Gson gson = new Gson();

@@ -217,6 +217,7 @@ public class ShowroomActivity extends AppCompatActivity
             startActivity(my_info);
         } else if (id == R.id.btn_go_room_sample){
             Intent room_sample = new Intent(getApplicationContext(), RoomSample.class);
+            room_sample.putExtra("VISIBILITY_SHOWROOM",false);
             startActivity(room_sample);
         }
 

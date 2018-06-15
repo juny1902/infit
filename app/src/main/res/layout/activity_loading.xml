@@ -7,9 +7,10 @@
     tools:context=".LoadingActivity">
 
     <ImageView
+        android:scaleType="fitCenter"
         android:contentDescription="Loading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/loading2"/>
+        android:layout_height="match_parent"
+        android:src="@mipmap/loading"/>
 
 </android.support.constraint.ConstraintLayout>

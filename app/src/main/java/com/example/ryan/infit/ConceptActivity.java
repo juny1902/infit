@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -12,6 +14,7 @@ import com.google.gson.Gson;
 public class ConceptActivity extends AppCompatActivity {
     MBTI person;
     TextView tv_1st, tv_2nd, tv_3rd;
+    ImageButton back_from_concept;
     int[] places_t;
 
 
@@ -22,6 +25,14 @@ public class ConceptActivity extends AppCompatActivity {
         tv_1st = findViewById(R.id.tv_place_1st);
         tv_2nd = findViewById(R.id.tv_place_2nd);
         tv_3rd = findViewById(R.id.tv_place_3rd);
+        back_from_concept = findViewById(R.id.go_back_from_concept);
+
+        back_from_concept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         SharedPreferences sPrefs = getSharedPreferences("MBTIResult", MODE_PRIVATE);
         Gson gson = new Gson();

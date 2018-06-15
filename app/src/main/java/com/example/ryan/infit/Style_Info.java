@@ -42,14 +42,14 @@ public class Style_Info {
             R.mipmap.ic_launcher,
     };
     static int[] index_to_cloud = {
-            R.mipmap.romantic_cloud,
+            R.mipmap.wordcloud_romantic,
             R.mipmap.ic_launcher,
-            R.mipmap.classic_cloud,
-            R.mipmap.classic_cloud, // Hightech
-            R.mipmap.elegance_cloud,
+            R.mipmap.wordcloud_classic,
+            R.mipmap.wordcloud_hightech, // Hightech
+            R.mipmap.wordcloud_elegance,
             R.mipmap.ic_launcher,
-            R.mipmap.modern_cloud,
-            R.mipmap.minimal_cloud,
+            R.mipmap.wordcloud_modern,
+            R.mipmap.wordcloud_minimal,
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };

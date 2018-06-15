@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ShowroomActivity"
@@ -48,43 +49,76 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:src="@mipmap/market_whole"
+            android:background="#00FFFFFF"
             android:contentDescription="btn1"
-            android:onClick="onClick" />
+            android:onClick="onClick"
 
+            android:scaleType="fitCenter"
+            android:src="@mipmap/market_whole" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBgDark"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
         <ImageButton
             android:id="@+id/im_btn_tab_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:contentDescription="btn2"
-            android:onClick="onClick" />
-
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/market_livingroom" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBgDark"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
         <ImageButton
             android:id="@+id/im_btn_tab_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:contentDescription="btn3"
-            android:onClick="onClick" />
-
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/market_kitchen" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBgDark"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
         <ImageButton
             android:id="@+id/im_btn_tab_4"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:contentDescription="btn4"
-            android:onClick="onClick" />
-
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/market_bathroom" />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBgDark"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
         <ImageButton
             android:id="@+id/im_btn_tab_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:contentDescription="btn5"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/market_homeoffice" />
 
     </LinearLayout>
 
