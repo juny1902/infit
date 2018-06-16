@@ -15,7 +15,7 @@ android {
     }
     defaultConfig {
 
-        applicationId "com.example.ryan.infit"
+        applicationId "com.brainyoung.ryan.infit"
         minSdkVersion 24
         targetSdkVersion 27
         versionCode 1
